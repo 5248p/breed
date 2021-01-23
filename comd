@@ -1,0 +1,12 @@
+--batch-size 64
+36정도 채우면 21000/24000 정도 rtx3090기준
+
+# with pretrained weights
+python train.py --batch-size 40 --epochs 50 --data breed.yaml --weights yolov5l.pt --device 0
+
+
+# no pretrained weights  current
+python train.py --batch-size 40 --epochs 50 --data breed.yaml --cfg yolov5l.yaml --weights '' --device 0
+
+
+Epoch   gpu_mem       box       obj       cls     total   targets  img_size
